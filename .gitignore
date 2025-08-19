@@ -1,0 +1,39 @@
+# LaTeX 编译中间文件
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# 备份文件
+*.bak
+*~
+*.backup
+
+# 临时文件
+*.swp
+*.tmp
+
+# 特定构建工具文件
+*.xdv
+*.glg
+*.glo
+*.gls
+*.ist
+*.acn
+*.acr
+*.alg
+*.brf
+
+# 最终输出文件（根据需求选择是否忽略）
+# *.pdf  # 通常保留PDF，但如果不需跟踪可取消注释
+# *.dvi  # 旧格式输出文件

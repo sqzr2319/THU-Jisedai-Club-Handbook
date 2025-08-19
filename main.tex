@@ -1,0 +1,164 @@
+\documentclass[twoside]{book}
+\usepackage[fontset=none]{ctex}
+\setCJKmainfont{SimSun}[
+  BoldFont = SimHei,
+  ItalicFont = KaiTi,
+  BoldItalicFont = KaiTi
+]
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{tikz}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+\usepackage{geometry}
+%\usepackage{showframe}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage{eso-pic}
+\geometry{a4paper, left=1.5cm, right=1.5cm, top=2cm, bottom=3cm}
+
+\definecolor{truepurple}{RGB}{128, 0, 128}
+
+\usetikzlibrary{fadings}
+\geometry{
+  top=1.5cm,       % 从3cm减小到1.5cm
+  headheight=17.82637pt, % 解决fancyhdr警告
+  headsep=10pt,     % 增加页眉与正文间距
+  footskip=30pt     % 增加页脚与正文间距
+}
+
+% 定义聊天气泡样式
+\newcounter{chatcounter}
+\newcommand{\chatbubble}[4][left]{%
+  \stepcounter{chatcounter}%
+  \par\noindent%
+  \ifstrequal{#1}{left}
+    {% 左侧气泡
+     \begin{minipage}[t]{1.2cm} % 头像宽度
+        \begin{tikzpicture}[baseline=(current bounding box.center)]
+          \node[circle, draw=gray!50, line width=0.5pt, minimum size=1.2cm, 
+                path picture={\node at (path picture bounding box.center) 
+                {\includegraphics[width=1.2cm]{#2}};}] {};
+        \end{tikzpicture}
+     \end{minipage}%
+     \hspace{0.2cm}%
+     \begin{minipage}[t]{0.7\textwidth} % 消息框宽度
+        \vspace{-15pt} % 确保顶部对齐
+        \noindent\textcolor{darkgray!80}{\sffamily #3} % 昵称
+        \vspace{5pt}
+        \begin{tcolorbox}[
+          enhanced,
+          breakable,
+          colback=white,
+          colframe=white,
+          arc=8pt,
+          boxrule=0.5pt,
+          left=8pt,
+          right=8pt,
+          top=4pt,
+          bottom=4pt,
+          before skip=0pt,
+          after skip=10pt,
+          width=\linewidth
+        ]
+          #4
+        \end{tcolorbox}
+     \end{minipage}
+    }
+    {% 右侧气泡
+     \hfill%
+     \begin{minipage}[t]{0.7\textwidth} % 消息框宽度
+        \vspace{-15pt} % 确保顶部对齐
+        \noindent\hfill\textcolor{darkgray!80}{\sffamily #3} % 右对齐昵称
+        \hfill%
+        \begin{tcolorbox}[
+          enhanced,
+          breakable,
+          colback=truepurple!5!white,
+          colframe=purple!3!white,
+          arc=8pt,
+          boxrule=0.5pt,
+          left=8pt,
+          right=8pt,
+          top=4pt,
+          bottom=4pt,
+          before skip=0pt,
+          after skip=10pt,
+          width=\linewidth
+        ]
+          #4
+        \end{tcolorbox}
+     \end{minipage}%
+     \hspace{0.2cm}%
+     \begin{minipage}[t]{1.2cm} % 头像宽度
+        \begin{tikzpicture}[baseline=(current bounding box.center)]
+          \node[circle, draw=gray!50, line width=0.5pt, minimum size=1.2cm, 
+                path picture={\node at (path picture bounding box.center) 
+                {\includegraphics[width=1.2cm]{#2}};}] {};
+        \end{tikzpicture}
+     \end{minipage}
+    }%
+  \par\vspace{0.3cm}% 气泡间距
+}
+
+% 添加聊天背景
+\AddToShipoutPictureBG{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[gray!5] (current page.north west) rectangle (current page.south east);
+  \end{tikzpicture}
+}
+\pagestyle{fancy}
+\fancyhf{} % 清空所有页眉页脚
+\fancyhead[LE]{\hspace*{-1.5cm}\includegraphics[width=\paperwidth]{head.pdf}} % 偶数页左侧
+\fancyhead[RO]{\hspace*{-1.5cm}\includegraphics[width=\paperwidth]{headr.pdf}} % 奇数页右侧
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headsep}{5mm}
+\fancyfoot[LE]{\hspace{-1cm}\raisebox{-27pt}{\textcolor{white}{\textbf{\textsf{\thepage}}}}} % 偶数页左侧
+\fancyfoot[RO]{\rlap{\hspace{0.8cm}\raisebox{-27pt}{\textcolor{white}{\textbf{\textsf{\thepage}}}}}}
+\renewcommand{\footrulewidth}{0pt}
+\AddToShipoutPictureBG{%
+  \ifodd\value{page}
+    \AtPageLowerLeft{%
+      \raisebox{15pt}[0pt][0pt]{\includegraphics[width=\paperwidth]{footr.pdf}}%
+    }
+  \else
+    \AtPageLowerLeft{%
+      \raisebox{15pt}[0pt][0pt]{\includegraphics[width=\paperwidth]{footl.pdf}}%
+    }
+  \fi
+}
+\begin{document}
+% 设置页眉页脚
+
+
+% 添加渐变装饰线
+
+
+% 左侧聊天（用户A）
+\chatbubble[left]{qingfen.png}{22-清芬}{
+  你好！这是一个改进的QQ风格聊天气泡示例。\\
+  头像现在在昵称的正左方，垂直对齐。
+}
+
+% 右侧聊天（用户B）
+\chatbubble[right]{example-image-b}{用户B}{
+  这个实现使用baseline选项确保垂直对齐。\\
+  头像和昵称/消息框现在在垂直方向上正确对齐。
+}
+
+% 左侧聊天（用户A）
+\chatbubble[left]{example-image-a}{用户A}{
+  长文本测试：LaTeX是一种基于TeX的排版系统，由美国计算机科学家莱斯利·兰伯特在20世纪80年代初期开发。它非常适用于生成高印刷质量的科技和数学文档，能够方便地排版复杂的数学公式。
+}
+
+% 右侧聊天（用户B）
+\chatbubble[right]{example-image-b}{用户B}{
+  垂直对齐问题已解决，\\
+  头像现在与昵称和消息框在同一水平线上。\\
+  无论消息内容多少，对齐都保持一致。
+}
+\newpage
+wow!
+\end{document}
