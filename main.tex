@@ -51,8 +51,8 @@
         \begin{tcolorbox}[
           enhanced,
           breakable,
-          colback=white,
-          colframe=white,
+          colback=gray!5!white,
+          colframe=gray!5!white,
           arc=8pt,
           boxrule=0.5pt,
           left=8pt,
@@ -72,6 +72,7 @@
      \begin{minipage}[t]{0.7\textwidth} % 消息框宽度
         \vspace{-15pt} % 确保顶部对齐
         \noindent\hfill\textcolor{darkgray!80}{\sffamily #3} % 右对齐昵称
+        \vspace{5pt}
         \hfill%
         \begin{tcolorbox}[
           enhanced,
@@ -104,11 +105,7 @@
 }
 
 % 添加聊天背景
-\AddToShipoutPictureBG{%
-  \begin{tikzpicture}[remember picture, overlay]
-    \fill[gray!5] (current page.north west) rectangle (current page.south east);
-  \end{tikzpicture}
-}
+
 \pagestyle{fancy}
 \fancyhf{} % 清空所有页眉页脚
 \fancyhead[LE]{\hspace*{-1.5cm}\includegraphics[width=\paperwidth]{head.pdf}} % 偶数页左侧
@@ -136,29 +133,27 @@
 % 添加渐变装饰线
 
 
-% 左侧聊天（用户A）
+
 \chatbubble[left]{qingfen.png}{22-清芬}{
-  你好！这是一个改进的QQ风格聊天气泡示例。\\
-  头像现在在昵称的正左方，垂直对齐。
+紫哥桃子姐带我入社已经三年啦!次世代的社友个个都是人才，说话也好听，
+玩得很开心呢，要说印象最深刻的当然是第一次idolive宅舞专场
+我的舞台初体验啦，但是当然不仅限于此，每一天都很开心呢!
+最喜欢次世代的大家了!
+}
+
+
+\chatbubble[left]{guitarhero.png}{吉他英雄}{
+  加入动漫社……是不是意味着要参加好多好多线下活动?要自我介绍?要上舞台?
+  这个绝对做做做做做做做做不到!
 }
 
 % 右侧聊天（用户B）
-\chatbubble[right]{example-image-b}{用户B}{
-  这个实现使用baseline选项确保垂直对齐。\\
-  头像和昵称/消息框现在在垂直方向上正确对齐。
-}
-
-% 左侧聊天（用户A）
-\chatbubble[left]{example-image-a}{用户A}{
-  长文本测试：LaTeX是一种基于TeX的排版系统，由美国计算机科学家莱斯利·兰伯特在20世纪80年代初期开发。它非常适用于生成高印刷质量的科技和数学文档，能够方便地排版复杂的数学公式。
-}
-
-% 右侧聊天（用户B）
-\chatbubble[right]{example-image-b}{用户B}{
-  垂直对齐问题已解决，\\
-  头像现在与昵称和消息框在同一水平线上。\\
-  无论消息内容多少，对齐都保持一致。
+\chatbubble[right]{taozi.png}{12-桃子}{
+ 绝对没这回事!我们所有的活动都是自愿参加的!当然，我们欢
+ 迎每一位社员的热情。但是就算只是来咖啡厅买一杯特调，来社庆做
+ 一枚静静的观众，或在群聊里默
+ 默收集好看的图片也都没问题!我们的宗旨就是玩得开心!
 }
 \newpage
-wow!
+哇袄
 \end{document}
