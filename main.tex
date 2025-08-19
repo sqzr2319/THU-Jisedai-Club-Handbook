@@ -1,4 +1,4 @@
-\documentclass[twoside]{book}
+\documentclass[twoside,12pt]{book}
 \usepackage[fontset=none]{ctex}
 \setCJKmainfont{SimSun}[
   BoldFont = SimHei,
@@ -17,8 +17,13 @@
 \usepackage{fancyhdr}
 \usepackage{comment}
 \usepackage{eso-pic}
-\geometry{a4paper, left=1.5cm, right=1.5cm, top=2cm, bottom=3cm}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning}
+\usetikzlibrary{shapes, arrows}  
 
+\geometry{a4paper, left=1.5cm, right=1.5cm, top=2cm, bottom=3cm}
+\setCJKsansfont{SimHei}
 \definecolor{truepurple}{RGB}{128, 0, 128}
 
 \usetikzlibrary{fadings}
@@ -126,13 +131,102 @@
     }
   \fi
 }
+\definecolor{thuorange}{RGB}{247, 148, 29}
+
 \begin{document}
 % 设置页眉页脚
+% {{{ 第一页
+\vspace*{0.7cm}
+
+% 页面顶部的大标题
+
+% 中心社团信息
+
+\begin{flushleft}
+    \fontsize{30pt}{32pt}\selectfont
+    \textbf{\textcolor{truepurple}{清华大学学生次世代动漫社}}
+    \\[0ex]
+    \fontsize{18pt}{20pt}\selectfont
+    \textcolor{thuorange}{THU Student New Era ACG Club}
+    % 新增图片位置（标题下方）
+    \vspace{-1cm} % 标题与图片的间距
+    \noindent\hspace*{\dimexpr\textwidth-5cm-1cm}% 保持右侧对齐
+    \includegraphics[width=6.5cm]{thujisedai.png}
+\end{flushleft}
+% 右上角的图片占位符
 
 
-% 添加渐变装饰线
+\vspace{-0.2cm}
+
+% 内容部分
+\begin{flushleft}
+    \begin{minipage}[t]{0.45\textwidth}
+        \section*{\normalsize\textbf{\textcolor{truepurple}{社团理念}}}
+        \vspace{-1em}
+        \subsection*{\normalsize\textbf{\textcolor{thuorange}{Core Concepts}}}
+        \vspace{-0.5em}
+        \small
+        \begin{itemize}
+            \item \textbf{服务同好人群} \textit{Serve like-minded people}
+            \item \textbf{支持原创力量} \textit{Support creative power}
+            \item \textbf{宣传动漫文化} \textit{Promote ACG culture}
+        \end{itemize}
+
+        \section*{\normalsize\textbf{\textcolor{truepurple}{成立时间}}}
+        \vspace{-1em}
+        \subsection*{\normalsize\textbf{\textcolor{thuorange}{Time of Establishment}}}
+        \vspace{-0.5em}
+        \small
+        \textbf{1999年}
 
 
+        
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.5\textwidth}
+        \section*{\normalsize\textbf{\textcolor{truepurple}{职能部门}}}
+        \vspace{-1em}
+        \subsection*{\normalsize\textbf{\textcolor{thuorange}{Functional Department}}}
+        \vspace{-0.5em}
+        \small
+        \textbf{组织部} \textit{Department of organization}
+        \vspace{1.5em}
+        \section*{\normalsize\textbf{\textcolor{truepurple}{兴趣部门}}}
+        \vspace{-1em}
+        \subsection*{\normalsize\textbf{\textcolor{thuorange}{Interest Departments}}}
+        \vspace{-0.5em}
+        \small
+        \textbf{两百余个}，包括泛ACGN领域各类兴趣爱好\\也欢迎组建新的部门！\\ \textit{More than 200,covering various fields of ACGN themes}. \\(And you can establish new departments if you want!)
+    \end{minipage}
+\end{flushleft}
+
+\vfill
+
+\vspace{0.5cm}
+% 底部荣誉信息
+\begin{center}
+    \Large\textbf{\textcolor{truepurple}{社团荣誉}}
+    \\[0ex]
+    \large\textbf{\textit{\textcolor{thuorange}{Club Honors}}}
+\end{center}
+
+\vspace{0.5cm}
+\begin{flushleft}
+    \begin{itemize}
+        \item[] \normalsize\textbf{2017-2018学年} \qquad 清华大学\textbf{十佳学生社团}
+        \item[] \normalsize\textbf{2018-2019学年} \qquad 清华大学\textbf{十佳学生社团}
+        \item[] \normalsize\textbf{2019-2020学年} \qquad 清华大学\textbf{十佳学生社团} “ 星空杯 ”
+        \item[] \normalsize\textbf{2020-2021学年} \qquad 清华大学学生社团\textbf{优秀风采奖}
+        \item[] \normalsize\textbf{2021-2022学年} \qquad 清华大学学生社团\textbf{优秀风采奖}
+        \item[] \normalsize\textbf{2022-2023学年} \qquad 清华大学\textbf{最佳兴趣类学生社团}
+        \item[] \normalsize\textbf{2023-2024学年} \qquad 清华大学\textbf{最佳兴趣类学生社团}
+        \item[] \normalsize\textbf{2024-2025学年} \qquad 清华大学\textbf{最佳兴趣类学生社团}
+    \end{itemize}
+\end{flushleft}
+
+\vfill
+\newpage
+% }}}
 
 \chatbubble[left]{qingfen.png}{22-清芬}{
 紫哥桃子姐带我入社已经三年啦!次世代的社友个个都是人才，说话也好听，
