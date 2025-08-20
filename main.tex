@@ -16,6 +16,7 @@
 %\usepackage{showframe}
 \usepackage{fancyhdr}
 \usepackage{comment}
+\usepackage{adjustbox}
 \usepackage{eso-pic}
 \usepackage{ragged2e}
 \usepackage{tikz}
@@ -25,17 +26,18 @@
 \geometry{a4paper, left=1.5cm, right=1.5cm, top=2cm, bottom=3cm}
 \setCJKsansfont{SimHei}
 \definecolor{truepurple}{RGB}{128, 0, 128}
-
+\definecolor{taopink}{HTML}{F17F98}
 \usetikzlibrary{fadings}
 \geometry{
   top=1.5cm,       % 从3cm减小到1.5cm
-  headheight=17.82637pt, % 解决fancyhdr警告
+  headheight=18.57637pt, % 解决fancyhdr警告
   headsep=10pt,     % 增加页眉与正文间距
   footskip=30pt     % 增加页脚与正文间距
 }
 
 % 定义聊天气泡样式
 \newcounter{chatcounter}
+\newcommand{\chind}{\hspace*{2em}}
 \newcommand{\chatbubble}[4][left]{%
   \stepcounter{chatcounter}%
   \par\noindent%
@@ -164,19 +166,20 @@
         \section*{\normalsize\textbf{\textcolor{truepurple}{社团理念}}}
         \vspace{-1em}
         \subsection*{\normalsize\textbf{\textcolor{thuorange}{Core Concepts}}}
-        \vspace{-0.5em}
+        \vspace{-0em}
         \small
         \begin{itemize}
             \item \textbf{服务同好人群} \textit{Serve like-minded people}
             \item \textbf{支持原创力量} \textit{Support creative power}
             \item \textbf{宣传动漫文化} \textit{Promote ACG culture}
         \end{itemize}
+        \vspace{0.7em}
 
         \section*{\normalsize\textbf{\textcolor{truepurple}{成立时间}}}
         \vspace{-1em}
         \subsection*{\normalsize\textbf{\textcolor{thuorange}{Time of Establishment}}}
         \vspace{-0.5em}
-        \small
+        
         \textbf{1999年}
 
 
@@ -187,10 +190,10 @@
         \section*{\normalsize\textbf{\textcolor{truepurple}{职能部门}}}
         \vspace{-1em}
         \subsection*{\normalsize\textbf{\textcolor{thuorange}{Functional Department}}}
-        \vspace{-0.5em}
+        \vspace{-0em}
         \small
         \textbf{组织部} \textit{Department of organization}
-        \vspace{1.5em}
+        \vspace{0.4em}
         \section*{\normalsize\textbf{\textcolor{truepurple}{兴趣部门}}}
         \vspace{-1em}
         \subsection*{\normalsize\textbf{\textcolor{thuorange}{Interest Departments}}}
@@ -227,12 +230,98 @@
 \vfill
 \newpage
 % }}}
+\begin{flushleft}
+  \adjustbox{valign=t}{
+    \begin{minipage}[t]{0.35\textwidth}
+      \includegraphics[width=\linewidth]{taozifull.png}
+    \end{minipage}%
+    }
+    \hfill
+    \adjustbox{valign=t}{
+    \begin{minipage}[t]{0.55\textwidth}
+        \vspace{10pt}
+        \section*{\Large\textbf{\textcolor{taopink}{桃子}}}
+        \vspace{-1em}
+        \subsection*{\normalsize\textbf{\textcolor{thuorange}{Meet Taozi}}}
+        \vspace{-0em}
+        \small
+        \chind 作为大家公认的金牌吃货，最喜欢和大家一起分享校内外好吃的东西，
+        最近最喜欢的食物是清芬亲手做的点心；同时也作为大家公认的电脑白痴，
+        几乎每周都要上演《我什么都没做电脑就坏了》的经典桥段……\\
+        \chind 最喜欢紫哥和清芬，
+        并且毫不掩饰自己的感情，有时候也会配合清芬一起捉弄紫哥；同时也最喜欢次世代的大家，
+        目前正在和清芬一起努力，希望成为次世代大家心目中最可爱的偶像！
+        \vspace{0.4em}
+    \end{minipage}
+    }
+\end{flushleft}
+\begin{flushleft}
 
-\chatbubble[left]{qingfen.png}{22-清芬}{
-紫哥桃子姐带我入社已经三年啦!次世代的社友个个都是人才，说话也好听，
-玩得很开心呢，要说印象最深刻的当然是第一次idolive宅舞专场
-我的舞台初体验啦，但是当然不仅限于此，每一天都很开心呢!
-最喜欢次世代的大家了!
+    \adjustbox{valign=t}{
+    \begin{minipage}[t]{0.55\textwidth}
+        
+        \section*{\Large\textbf{\textcolor{truepurple}{紫荆}}}
+        \vspace{-1em}
+        \subsection*{\normalsize\textbf{\textcolor{thuorange}{Meet Zijing}}}
+        \vspace{-0em}
+        \small
+        \chind 作为次世代大家心照不宣的无口系+暖男系+亚撒西帅哥，
+        被大家亲切地称为“紫哥”，家务做饭、电器维修、电子游戏全能的紫哥
+        也成为了桃子最为依赖的存在；但是紫荆在运动方面却惊人地残念，
+        明明拥有那么好的身材……都系得（\\
+        \chind 作为大家最喜欢的长辈（？），
+        虽然常常被清芬和桃子捉弄，但是却从未生过气；很擅长保护桃子和清芬，
+        同时也视她们为生命中最需要守护的存在，而这一理念带来的结果就是紫荆
+        常常会无意识地对桃子和清芬进行说教，
+        结果往往引来她俩新一轮的捉弄，真是无奈啊……
+        \vspace{0.4em}
+        \vspace{\baselineskip}
+    \end{minipage}
+    }
+    \hfill
+  \adjustbox{valign=t}{
+    \begin{minipage}[t]{0.35\textwidth}
+      \vspace{-4em}
+      \raisebox{-\height}[0pt][0pt]{
+      \includegraphics[height=1.82\linewidth,width=\linewidth]{zijingfull.png}}
+    \end{minipage}%
+    }
+    
+  
+\end{flushleft}
+
+  \adjustbox{valign=t}{
+    \begin{minipage}[t]{0.35\textwidth}
+      \vspace{-2em}
+      \raisebox{-\height}[0pt][0pt]{
+      \includegraphics[width=0.85\linewidth]{qingfenfull.png}}
+    \end{minipage}%
+    }
+    \hfill
+    \adjustbox{valign=t}{
+    \begin{minipage}[t]{0.55\textwidth}
+        \section*{\Large\textbf{\textcolor{green!50!black}{清芬}}}
+        \vspace{-1em}
+        \subsection*{\normalsize\textbf{\textcolor{thuorange}{Meet Qingfen}}}
+        \vspace{-0em}
+        \small
+      \chind 自幼便能歌善舞、希望带给大家开心和笑容的清芬加入次世代大家庭后，
+      马上成为了社友们眼中最闪耀的偶像！\\ 
+      \chind 作为次世代最小的看板娘，
+      非常喜欢桃子和紫哥（虽然常常以玩笑掩饰自己的这份喜欢）。平时尤以捉弄桃子为乐，但是又会做非常多超好吃的甜点带给桃子，
+      引得桃子对清芬死心塌地（？）；\\ 
+      \chind 日常中欢快跳脱的性格
+      和舞台上闪闪发光的演出引得众人喜爱，
+      但是也常常做出种种脱线的行为，让紫哥头疼不已……    
+        \vspace{0.4em}
+    \end{minipage}
+    }
+\newpage 
+\chatbubble[left]{qingfen.png}{22-清芬}{%
+  紫哥桃子姐带我入社已经三年啦!次世代的社友个个都是人才，说话也好听，
+  玩得很开心呢。要说印象最深刻的当然是第一次idolive宅舞专场
+  我的舞台初体验啦，但是当然不仅限于此，每一天都很欢乐呢!
+  最喜欢次世代的大家了!
 }
 
 
@@ -243,10 +332,10 @@
 
 % 右侧聊天（用户B）
 \chatbubble[right]{taozi.png}{12-桃子}{
- 绝对没这回事!我们所有的活动都是自愿参加的!当然，我们欢
+ 绝对没这回事\~{}我们所有的活动都是自愿参加的!当然，我们欢
  迎每一位社员的热情。但是就算只是来咖啡厅买一杯特调，来社庆做
  一枚静静的观众，或在群聊里默
- 默收集好看的图片也都没问题!我们的宗旨就是玩得开心!
+ 默收集好看的图片也都没问题!我们的宗旨就是玩得开心\~{}
 }
 \newpage
 哇袄
