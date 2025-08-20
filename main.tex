@@ -13,6 +13,7 @@
 \usepackage{xcolor}
 \usepackage{eso-pic}
 \usepackage{geometry}
+\usepackage{textcomp}
 %\usepackage{showframe}
 \usepackage{fancyhdr}
 \usepackage{comment}
@@ -20,6 +21,19 @@
 \usepackage{eso-pic}
 \usepackage{ragged2e}
 \usepackage{tikz}
+\usepackage{multicol}
+\usepackage{enumitem}
+\newenvironment{categorysection}[1]{
+  \subsection*{\textcolor{truepurple}{#1}}
+  \begin{itemize}[leftmargin=*, 
+                 nosep,               % 移除所有额外间距
+                 itemsep=2pt,         % 条目间距=0
+                 parsep=0pt,          % 段落间距=0
+                 before=\setlength{\baselineskip}{23pt} % 设置行距
+  ]
+}{
+  \end{itemize}
+}
 \usetikzlibrary{calc,positioning}
 \usetikzlibrary{shapes, arrows}  
 
@@ -108,7 +122,7 @@
         \end{tikzpicture}
      \end{minipage}
     }%
-  \par\vspace{0.3cm}% 气泡间距
+  \par\vspace{0.1cm}% 气泡间距
 }
 
 % 添加聊天背景
@@ -230,6 +244,256 @@
 
 \vfill
 \newpage
+\flushleft
+\begin{multicols}{3}
+    
+    \begin{categorysection}{组织部门}
+        \item 次世代2024-2026组织部
+    \end{categorysection}
+    
+    \begin{categorysection}{创作类}
+        \item 次世代绘画部
+        \item 次世代Cosplay\&舞台剧部
+        \item 次世代音声部
+        \item 次世代MAD部
+        \item 次世代视觉系
+    \end{categorysection}
+    
+    \begin{categorysection}{歌舞艺术类}
+        \item 次世代宅舞部
+        \item 次世代乐队部
+        \item 次世代水木wota艺\\(光棒艺)部
+        \item 次世代lolita部
+        \item 次世代vocaloid部
+        \item 次世代配音部
+        \item 次世代舞台创造科
+        \item 次世代草根妖怪乐团\\（乐器部）
+        \item 次世代曲艺部
+        \item 次世代华语金曲部
+        \item 次世代J-pop音乐交流部
+        \item 次世代伪音学习部
+        \item 次世代电子音乐部
+        \item 次世代声乐学习部
+    \end{categorysection}
+    
+    \begin{categorysection}{综合类}
+        \item 次世代Galgame部
+        \item 次世代轻小说部
+        \item 次世代漫研部
+        \item 次世代动画研究会
+        \item 次世代百合部
+        \item 次世代BL部
+        \item 次世代绘画部
+        \item 次世代国产动画部
+        \item 次世代文艺部
+        \item 次世代网文部
+        \item 次世代恋爱喜剧部
+        \item 次世代游戏制作交流部
+        \item 次世代放映部
+        \item 次世代同人文部
+        \item 次世代读书交流部
+        \item 次世代furry部
+        \item 次世代心憩部
+        \item 次世代奇幻+异世界部
+        \item 次世代美图部
+    \end{categorysection}
+
+    \begin{categorysection}{作品类}
+        \item 次世代东方project部\\（2019年新群）
+        \item 次世代LoveLive!部
+        \item 次世代白色相簿2部
+        \item 次世代命运石之门部
+        \item 次世代魔法少女小圆部
+        \item 次世代芳文社部
+        \item 次世代jojo部
+        \item 次世代BanG Dream!部
+        \item 次世代偶像部\\（偶像大师、偶像声优）
+        \item 次世代少女歌剧部
+        \item 次世代龙族部
+        \item 次世代鬼灭之刃部
+        \item 次世代进击的巨人部
+        \item 次世代叛逆的鲁鲁修部
+        \item 次世代赤坂作品研究部\\（辉夜大小姐\&我推的孩子）
+        \item 次世代路学研究基地\\（路人女主）
+        \item 次世代IDOLiSH7部
+        \item 次世代兽耳放送部
+        \item 次世代某部\\（魔禁超炮科方AB）
+        \item 次世代西尾维新同好会
+        \item 次世代凉宫春日部
+        \item 次世代银河英雄传说部
+        \item 次世代Re0部
+        \item 次世代间谍过家家部
+        \item 次世代小绿和小蓝部
+        \item 次世代孤独摇滚部
+        \item 次世代猫猫虫部
+        \item 次世代京阿尼部
+        \item 次世代SCP部
+        \item 次世代aph部
+        \item 次世代柯南部
+        \item 次世代拜年祭\&2233部
+        \item 次世代Macross部
+    \end{categorysection}
+
+    \begin{categorysection}{游戏类}
+        \item 次世代STEAM部
+        \item 次世代dota2部
+        \item 次世代FGO部
+        \item 次世代舰C部
+        \item 次世代日麻部
+        \item 次世代TRPG跑团部
+        \item 次世代音游部
+        \item 次世代游戏王部
+        \item 次世代游戏王决斗链接部
+        \item 次世代主机游戏部
+        \item 次世代明日方舟部
+        \item 次世代华大联盟工坊\\（我的世界部）
+        \item 次世代FF14部
+        \item 次世代怪物猎人部
+        \item 次世代碧蓝航线部
+        \item 次世代崩崩崩部
+        \item 次世代阴阳师部
+        \item 次世代英雄联盟部
+        \item 次世代shadowverse部
+        \item 次世代shadowverse evolve
+        \item 次世代桌游部
+        \item 次世代舰R部
+        \item 次世代星际部
+        \item 次世代DNF部
+        \item 次世代暖暖部
+        \item 次世代手游MOBA部
+        \item 次世代彩虹六号围攻部
+        \item 次世代CSGO部
+        \item 次世代EnsembleStars部
+        \item 次世代万智牌部
+        \item 次世代文明部
+        \item 次世代梦100部
+        \item 次世代轨迹部
+        \item 次世代国产rpg部
+        \item 次世代冒险岛部
+        \item 次世代火纹部
+        \item 次世代碧蓝幻想部
+        \item 次世代公主链接部
+        \item 次世代FTG部
+        \item 次世代英雄无敌部
+        \item 次世代Ingress XM研究所
+        \item 次世代魔法记录部
+        \item 次世代原神部
+        \item 次世代战双帕弥什
+        \item 次世代永远的7日之都
+        \item 次世代元气骑士部
+        \item 次世代动物森友会
+        \item 次世代宝可梦部
+        \item 次世代persona部
+        \item 次世代小众手游部
+        \item 次世代Wixoss部
+        \item 次世代黑白双翼Wei$\beta$~Schwarz部
+        \item 次世代少女前线部
+        \item 次世代少女前线2追放部
+        \item 次世代APEX部
+        \item 次世代プロセカ部
+        \item 次世代云图计划部
+        \item 次世代RPG MAKER\\游戏部
+        \item 次世代魂血狼环部
+        \item 次世代赛马娘部
+        \item 次世代无期迷途部
+        \item 次世代深空之眼部
+        \item 次世代星穹铁道部
+        \item 次世代炼金工房部
+        \item 次世代蔚蓝档案部
+        \item 次时代红警交流群
+        \item 次世代重返未来1999部
+        \item 次世代月亮计划游戏部
+        \item 次世代PTCG部
+        \item 次时代逆水寒手游部
+        \item 次世代斯普拉遁部
+        \item 次世代坦克世界部
+        \item 次世代卡拉比丘部
+        \item 次世代heaven burns red部
+        \item 次世代rougelike部
+        \item 次世代植物大战僵尸部
+        \item 次世代物华弥新部
+        \item 次世代duckgame部
+        \item 次世代泰拉瑞亚部
+        \item 次世代鸣潮
+        \item 次世代绝区零
+        \item 次世代p社游戏
+        \item 次世代尘白禁区
+        \item 次世代forza horizon
+        \item 次世代VRChat部
+        \item 次世代逆转裁判部
+        \item 次世代EVE Online部
+        \item 次世代第五人格部
+        \item 次时代rimworld/环世界部
+        \item 次世代新月同行部
+        \item 次世代戴森球计划部
+        \item 次世代绝地潜兵部
+        \item 次世代火影忍者手游部
+        \item 次世代JRPG部
+        \item 次世代csgo菜鸟部
+        \item 次世代战锤部
+        \item 次世代剑三部
+        \item 次世代三角洲行动部
+        \item 次世代银与绯
+        \item 次世代夜幕魅影
+        \item 次世代星露谷物语部
+        \item 次世代都市天际线部
+        \item 次世代米游杂食铺
+    \end{categorysection}
+
+    \begin{categorysection}{娱乐影视类}
+        \item 次世代Vtuber单推部
+        \item 次世代男声优部
+        \item 次世代女声优部
+        \item 次世代三次元偶像部
+        \item 次世代地下偶像部
+        \item 次世代电影电视剧部
+        \item 次世代特摄部
+        \item 次世代大友部
+        \item 次世代asmr部
+        \item 次世代动画歌牌部
+        \item 次世代华清魔法部
+        \item 次世代神椿部
+    \end{categorysection}
+
+    \begin{categorysection}{科技生活类}
+        \item 次世代打工部
+        \item 次世代外卖部
+        \item 次世代硬件部
+        \item 次世代电子系部\\（电子系互助部）
+        \item 次世代数学部
+        \item 次世代学习部
+        \item 次世代日本分部
+        \item 次世代运动部
+        \item 次世代足球部
+        \item 次世代手办种草部
+        \item 次世代火锅部
+        \item 次世代养生部
+        \item 次世代3D建渲部
+        \item 次世代双清部（双清公寓）
+        \item 次世代AI绘画部
+        \item 次世代机器学习部
+        \item 次世代跑路军团（旅行部）
+        \item 次世代对抗脱发部
+        \item 次世代猫猫部
+        \item 次世代社畜群
+        \item 次世代篮球部
+        \item 次世代f1部
+        \item 次世代色觉异常部
+        \item 次世代机航动抱团互助部
+        \item 次世代Kigurumi部
+        \item 次世代软件开发部
+        \item 次世代日语学习部
+        \item 次世代中古部
+        \item 次世代语言学部
+        \item 次世代多邻国部
+        \item 次世代摄影部
+        \item 次世代小厨娘部\\（烹饪/晒饭部）
+        \item 次世代道具制造部
+        \item 次世代周边交易部（谷子部）
+    \end{categorysection}
+
+\end{multicols}
+\newpage
 % }}}
 \begin{flushleft}
   \adjustbox{valign=t}{
@@ -318,14 +582,51 @@
     \end{minipage}
     }
 \newpage 
-\chatbubble[left]{qingfen.png}{22-清芬}{%
-  紫哥桃子姐带我入社已经三年啦!次世代的社友个个都是人才，说话也好听，
-  玩得很开心呢。要说印象最深刻的当然是第一次idolive宅舞专场
-  我的舞台初体验啦，但是当然不仅限于此，每一天都很欢乐呢!
-  最喜欢次世代的大家了!
+\chatbubble[left]{taozi.png}{桃子没有在摸鱼}{%
+大家好，这里是次世代的看板娘桃子，同时也是一名超——级敬业的vup\~{}
 }
-
-
+\chatbubble[left]{qingfen.png}{清芬}{%
+大家好！我是次世代的看板娘清芬！
+}
+\chatbubble[right]{zijing.png}{紫荆}{
+  我是紫荆。
+}
+\chatbubble[left]{taozi.png}{桃子没有在摸鱼}{%
+那么什么是次世代呢？
+}
+\chatbubble[right]{zijing.png}{紫荆}{
+那么什么是次世代呢？
+}
+\chatbubble[left]{qingfen.png}{清芬}{%
+客服工号1911桃子为您解答：
+}
+\chatbubble[left]{taozi.png}{桃子没有在摸鱼}{%
+？！
+}
+\chatbubble[left]{taozi.png}{桃子没有在摸鱼}{%
+欸多~咳嗯！次世代全称清华大学学生次世代动漫社，是，是……由两百多个兴趣部门组成的……
+}
+\chatbubble[left]{qingfen.png}{22-清芬}{%
+……泛ACGN类兴趣社团（看稿子）
+}
+\chatbubble[right]{zijing.png}{紫荆}{
+你俩……
+}
+\chatbubble[left]{taozi.png}{桃子没有在摸鱼}{%
+咳嗯！次世代的一大特色就是丰富多彩的兴趣部门。从ACGN到运动养生，无论你对什么感兴趣，都可以在分部里找到你的同好！
+}
+\chatbubble[left]{qingfen.png}{清芬}{%
+是的！即使没有找到组织，也可以秉着“三人成部”的原则，寻找同好，建立自己的兴趣部门！目前已经注册在案的有近两百个部门了~
+}
+\chatbubble[right]{zijing.png}{紫荆}{
+言归正传。接下来，让我们看一些社团资料，更加深入地了解次世代。
+}
+\chatbubble[left]{qingfen.png}{清芬}{%
+紫哥桃子姐带我入社已经三年啦! 次世代的社友个个都是人才，说
+话也好听，玩得很开心呢。要说印象最深刻的当然是第一次 idolive
+宅舞专场我的舞台初体验啦，但是当然不仅限于此，每一天都很
+欢乐呢! 最喜欢次世代的大家了!
+}
 \chatbubble[left]{guitarhero.png}{吉他英雄}{
   加入动漫社……是不是意味着要参加好多好多线下活动?要自我介绍?要上舞台?
   这个绝对做做做做做做做做不到!
