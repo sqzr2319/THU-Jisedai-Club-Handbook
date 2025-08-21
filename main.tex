@@ -13,6 +13,7 @@
 \usepackage{xcolor}
 \usepackage{eso-pic}
 \usepackage{geometry}
+\usepackage{setspace}
 \usepackage{textcomp}
 %\usepackage{showframe}
 \usepackage{fancyhdr}
@@ -41,6 +42,10 @@
 \setCJKsansfont{SimHei}
 \definecolor{truepurple}{RGB}{128, 0, 128}
 \definecolor{taopink}{HTML}{F17F98}
+\definecolor{tao}{HTML}{FFF2F9}
+\definecolor{zi}{HTML}{F8F2F9}
+\definecolor{qing}{HTML}{F2F9EA}
+\definecolor{default}{gray}{0.05}
 \usetikzlibrary{fadings}
 \geometry{
   top=1.5cm,       % 从3cm减小到1.5cm
@@ -52,7 +57,7 @@
 % 定义聊天气泡样式
 \newcounter{chatcounter}
 \newcommand{\chind}{\hspace*{2em}}
-\newcommand{\chatbubble}[4][left]{%
+\newcommand{\chatbubble}[5][left]{%
   \stepcounter{chatcounter}%
   \par\noindent%
   \ifstrequal{#1}{left}
@@ -72,8 +77,8 @@
         \begin{tcolorbox}[
           enhanced,
           breakable,
-          colback=gray!5!white,
-          colframe=gray!5!white,
+          colback={#5},
+          colframe={#5},
           arc=8pt,
           boxrule=0.5pt,
           left=8pt,
@@ -98,8 +103,8 @@
         \begin{tcolorbox}[
           enhanced,
           breakable,
-          colback=truepurple!5!white,
-          colframe=purple!3!white,
+          colback={#5},
+          colframe={#5},
           arc=8pt,
           boxrule=0.5pt,
           left=8pt,
@@ -150,8 +155,37 @@
 \definecolor{thuorange}{RGB}{247, 148, 29}
 
 \begin{document}
-% 设置页眉页脚
+\vspace*{0.7cm}
+\begin{center}
+    \fontsize{30pt}{32pt}\selectfont
+    \textbf{\textcolor{truepurple}{目录}}
+    \\[0ex]
+    \fontsize{18pt}{20pt}\selectfont
+    \textcolor{thuorange}{Contents}
+\end{center}
+\begin{Large}
+\doublespacing
+社团介绍\\ 
+主要活动介绍\\
+社团Q\&A\\
+分部介绍
+\begin{large}
+\begin{itemize}
+  \item 组织部门
+  \item 创作类
+  \item 歌舞艺术类
+  \item 综合类
+  \item 作品类
+  \item 游戏类
+  \item 娱乐影视类
+  \item 科技生活类
+\end{itemize}
+\end{large}
+\vspace*{0.3cm}
+社员寄语
+\end{Large}
 
+\newpage
 % {{{ 第一页
 \vspace*{0.7cm}
 
@@ -244,6 +278,13 @@
 
 \vfill
 \newpage
+\begin{center}
+    \fontsize{30pt}{32pt}\selectfont
+    \textbf{\textcolor{truepurple}{部门全表}}
+    \\[0ex]
+    \fontsize{18pt}{20pt}\selectfont
+    \textcolor{thuorange}{Department List}
+\end{center}
 \flushleft
 \begin{multicols}{3}
     
@@ -583,54 +624,61 @@
     }
 \newpage 
 \chatbubble[left]{taozi.png}{桃子没有在摸鱼}{%
-大家好，这里是次世代的看板娘桃子，同时也是一名超——级敬业的vup\~{}
-}
+大家好，这里是次世代的初代看板娘桃子\~{}
+}{tao}
 \chatbubble[left]{qingfen.png}{清芬}{%
 大家好！我是次世代的看板娘清芬！
-}
+}{qing}
 \chatbubble[right]{zijing.png}{紫荆}{
   我是紫荆。
-}
+}{zi}
 \chatbubble[left]{taozi.png}{桃子没有在摸鱼}{%
 那么什么是次世代呢？
-}
+}{tao}
 \chatbubble[right]{zijing.png}{紫荆}{
 那么什么是次世代呢？
-}
+}{zi}
 \chatbubble[left]{qingfen.png}{清芬}{%
 客服工号1911桃子为您解答：
-}
+}{qing}
 \chatbubble[left]{taozi.png}{桃子没有在摸鱼}{%
 ？！
-}
+}{tao}
 \chatbubble[left]{taozi.png}{桃子没有在摸鱼}{%
-欸多~咳嗯！次世代全称清华大学学生次世代动漫社，是，是……由两百多个兴趣部门组成的……
-}
-\chatbubble[left]{qingfen.png}{22-清芬}{%
+欸多\~{}咳嗯！次世代全称清华大学学生次世代动漫社，是，是……由两百多个兴趣部门组成的……
+}{tao}
+\chatbubble[left]{qingfen.png}{清芬}{%
 ……泛ACGN类兴趣社团（看稿子）
-}
+}{qing}
 \chatbubble[right]{zijing.png}{紫荆}{
 你俩……
-}
+}{zi}
 \chatbubble[left]{taozi.png}{桃子没有在摸鱼}{%
 咳嗯！次世代的一大特色就是丰富多彩的兴趣部门。从ACGN到运动养生，无论你对什么感兴趣，都可以在分部里找到你的同好！
-}
+}{tao}
 \chatbubble[left]{qingfen.png}{清芬}{%
-是的！即使没有找到组织，也可以秉着“三人成部”的原则，寻找同好，建立自己的兴趣部门！目前已经注册在案的有近两百个部门了~
-}
+是的！即使没有找到组织，也可以秉着“三人成部”的原则，寻找同好，建立自己的兴趣部门！目前已经注册在案的有两百多个部门了\~{}
+}{qing}
 \chatbubble[right]{zijing.png}{紫荆}{
 言归正传。接下来，让我们看一些社团资料，更加深入地了解次世代。
-}
-\chatbubble[left]{qingfen.png}{清芬}{%
+}{zi}
+\newpage
+\chatbubble[right]{zijing.png}{紫荆}{
+以下是社员寄语示例。
+}{zi}
+\chatbubble[left]{qingfen.png}{22-清芬}{%
 紫哥桃子姐带我入社已经三年啦! 次世代的社友个个都是人才，说
 话也好听，玩得很开心呢。要说印象最深刻的当然是第一次 idolive
 宅舞专场我的舞台初体验啦，但是当然不仅限于此，每一天都很
 欢乐呢! 最喜欢次世代的大家了!
-}
+}{qing}
+\chatbubble[right]{zijing.png}{紫荆}{
+以下是社团Q\&A示例。
+}{zi}
 \chatbubble[left]{guitarhero.png}{吉他英雄}{
   加入动漫社……是不是意味着要参加好多好多线下活动?要自我介绍?要上舞台?
   这个绝对做做做做做做做做不到!
-}
+}{gray!5!white}
 
 % 右侧聊天（用户B）
 \chatbubble[right]{taozi.png}{12-桃子}{
@@ -638,7 +686,7 @@
  迎每一位社员的热情。但是就算只是来咖啡厅买一杯特调，来社庆做
  一枚静静的观众，或在群聊里默
  默收集好看的图片也都没问题!我们的宗旨就是玩得开心\~{}
-}
+}{tao}
 \newpage
 哇袄
 \end{document}
