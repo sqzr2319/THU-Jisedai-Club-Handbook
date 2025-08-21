@@ -1,18 +1,24 @@
 \documentclass[twoside,12pt]{book}
+
+% 中文支持设置
+% 使用ctex包但不使用默认字体设置(fontset=none)
 \usepackage[fontset=none]{ctex}
+% 设置中文字体：宋体为主字体，黑体为粗体，楷体为斜体
 \setCJKmainfont{SimSun}[
   BoldFont = SimHei,
   ItalicFont = KaiTi,
   BoldItalicFont = KaiTi
 ]
-\usepackage{tcolorbox}
-\tcbuselibrary{skins, breakable}
-\usepackage{tikz}
-\usepackage{graphicx}
-\graphicspath{{figures/}}
-\usepackage{xcolor}
-\usepackage{eso-pic}
-\usepackage{geometry}
+% 加载常用包
+\usepackage{tcolorbox}  % 彩色文本框支持
+\tcbuselibrary{skins, breakable}  % 加载tcolorbox的皮肤和断页功能
+\usepackage{tikz}  % 绘图支持
+\usepackage{graphicx}  % 图片插入支持
+\graphicspath{{figures/}}  % 设置图片路径为figures目录
+% 颜色和页面布局设置
+\usepackage{xcolor}  % 颜色支持
+\usepackage{eso-pic}  % 页面背景支持
+\usepackage{geometry}  % 页面布局设置
 \usepackage{setspace}
 \usepackage{textcomp}
 %\usepackage{showframe}
@@ -39,14 +45,20 @@
 \usetikzlibrary{shapes, arrows}  
 
 \geometry{a4paper, left=1.5cm, right=1.5cm, top=2cm, bottom=3cm}
+% 设置无衬线中文字体为黑体
 \setCJKsansfont{SimHei}
-\definecolor{truepurple}{RGB}{128, 0, 128}
-\definecolor{taopink}{HTML}{F17F98}
-\definecolor{tao}{HTML}{FFF2F9}
-\definecolor{zi}{HTML}{F8F2F9}
-\definecolor{qing}{HTML}{F2F9EA}
-\definecolor{default}{gray}{0.05}
+
+% 定义文档使用的颜色
+\definecolor{truepurple}{RGB}{128, 0, 128}  % 主色调紫色
+\definecolor{taopink}{HTML}{F17F98}  % 桃子名字
+\definecolor{tao}{HTML}{FFF2F9}  % 桃子气泡
+\definecolor{zi}{HTML}{F8F2F9}  % 紫荆气泡
+\definecolor{qing}{HTML}{F2F9EA}  % 清芬气泡
+\definecolor{default}{HTML}{F9F9F9}  %默认气泡灰
+% 加载tikz的渐变效果库
 \usetikzlibrary{fadings}
+
+% 页面布局设置
 \geometry{
   top=1.5cm,       % 从3cm减小到1.5cm
   headheight=20.57637pt, % 解决fancyhdr警告
@@ -55,6 +67,15 @@
 }
 
 % 定义聊天气泡样式
+% 使用说明：
+% \chatbubble[位置]{头像路径}{昵称}{消息内容}{背景颜色}
+% 可选参数：
+% [left] - 左侧气泡（默认）
+% [right] - 右侧气泡
+% 示例：
+% \chatbubble[left]{taozi.png}{桃子}{消息内容}{tao}
+% \chatbubble[right]{zijing.png}{紫荆}{消息内容}{zi}
+% \chatbubble[right]{qingfen.png}{清芬}{消息内容}{qing}
 \newcounter{chatcounter}
 \newcommand{\chind}{\hspace*{2em}}
 \newcommand{\chatbubble}[5][left]{%
@@ -130,41 +151,58 @@
   \par\vspace{0.1cm}% 气泡间距
 }
 
-% 添加聊天背景
+% 设置页眉页脚样式
+\pagestyle{fancy}  % 使用fancy页眉页脚样式
+\fancyhf{} % 清空所有页眉页脚默认设置
 
-\pagestyle{fancy}
-\fancyhf{} % 清空所有页眉页脚
-\fancyhead[LE]{\hspace*{-1.5cm}\includegraphics[width=\paperwidth]{head.pdf}} % 偶数页左侧
-\fancyhead[RO]{\hspace*{-1.5cm}\includegraphics[width=\paperwidth]{headr.pdf}} % 奇数页右侧
-\renewcommand{\headrulewidth}{0pt}
-\setlength{\headsep}{5mm}
-\fancyfoot[LE]{\hspace{-1cm}\raisebox{-27pt}{\textcolor{white}{\textbf{\textsf{\thepage}}}}} % 偶数页左侧
+% 设置页眉
+% LE: 偶数页左侧页眉
+\fancyhead[LE]{\hspace*{-1.5cm}\includegraphics[width=\paperwidth]{head.pdf}} 
+% RO: 奇数页右侧页眉
+\fancyhead[RO]{\hspace*{-1.5cm}\includegraphics[width=\paperwidth]{headr.pdf}} 
+\renewcommand{\headrulewidth}{0pt}  % 移除页眉分隔线
+\setlength{\headsep}{5mm}  % 设置页眉与正文间距
+
+% 设置页脚
+% LE: 偶数页左侧页脚
+\fancyfoot[LE]{\hspace{-1cm}\raisebox{-27pt}{\textcolor{white}{\textbf{\textsf{\thepage}}}}} 
+% RO: 奇数页右侧页脚
 \fancyfoot[RO]{\rlap{\hspace{0.8cm}\raisebox{-27pt}{\textcolor{white}{\textbf{\textsf{\thepage}}}}}}
-\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}  % 移除页脚分隔线
+
+% 添加页面背景图片
+% 根据奇偶页显示不同的背景图片
 \AddToShipoutPictureBG{%
   \ifodd\value{page}
+    % 奇数页底部背景
     \AtPageLowerLeft{%
       \raisebox{15pt}[0pt][0pt]{\includegraphics[width=\paperwidth]{footr.pdf}}%
     }
   \else
+    % 偶数页底部背景
     \AtPageLowerLeft{%
       \raisebox{15pt}[0pt][0pt]{\includegraphics[width=\paperwidth]{footl.pdf}}%
     }
   \fi
 }
+% 定义橙色
 \definecolor{thuorange}{RGB}{247, 148, 29}
 
 \begin{document}
-\vspace*{0.7cm}
+% 目录页设置
+\vspace*{0.7cm}  % 顶部间距
 \begin{center}
+    % 主标题
     \fontsize{30pt}{32pt}\selectfont
     \textbf{\textcolor{truepurple}{目录}}
-    \\[0ex]
+    \\[0ex]  % 标题间距
+    % 副标题
     \fontsize{18pt}{20pt}\selectfont
     \textcolor{thuorange}{Contents}
 \end{center}
+% 目录内容
 \begin{Large}
-\doublespacing
+\doublespacing  % 双倍行距
 社团介绍\\ 
 主要活动介绍\\
 社团Q\&A\\
@@ -181,10 +219,18 @@
   \item 科技生活类
 \end{itemize}
 \end{large}
-\vspace*{0.3cm}
+\vspace*{0.3cm}  % 项目间距
 社员寄语
 \end{Large}
 
+% 引入第一章内容
+\newpage  % 新的一页
+\input{chapters/1_introduction.tex}  % 引入章节文件
 \newpage
-\input{chapters/1_introduction.tex}
+\begin{center}
+    % 主标题
+    \fontsize{90pt}{92pt}\selectfont
+    \textbf{哇袄}
+
+\end{center}
 \end{document}

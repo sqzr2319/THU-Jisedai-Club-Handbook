@@ -1,29 +1,24 @@
+% 第一章：社团介绍
 % {{{ 第一页
-\vspace*{0.7cm}
+\vspace*{0.7cm}  % 顶部间距
 
-% 页面顶部的大标题
-
-% 中心社团信息
-
+% 社团标题和logo布局
 \begin{flushleft}
+    % 主标题：中文社团名称
     \fontsize{30pt}{32pt}\selectfont
     \textbf{\textcolor{truepurple}{清华大学学生次世代动漫社}}
-    \\[0ex]
+    \\[0ex]  % 标题间距
+    % 副标题：英文社团名称
     \fontsize{18pt}{20pt}\selectfont
     \textcolor{thuorange}{THU Student New Era ACG Club}
-    % 新增图片位置（标题下方）
-    \vspace{-1cm} % 标题与图片的间距
-    \noindent\hspace*{\dimexpr\textwidth-5cm-1cm}% 保持右侧对齐
-    \includegraphics[width=6.5cm]{thujisedai.png}
+    % 右侧图片：社团logo
+    \vspace{-1cm} % 标题与图片的间距调整
+    \noindent\hspace*{\dimexpr\textwidth-5cm-1cm}% 计算右侧对齐位置
+    \includegraphics[width=6.5cm]{thujisedai.png}  % 社团logo图片
 \end{flushleft}
-% 右上角的图片占位符
-
-
-\vspace{-0.2cm}
-
-% 内容部分
+% 内容部分：两栏布局
 \begin{flushleft}
-    \begin{minipage}[t]{0.45\textwidth}
+    \begin{minipage}[t]{0.45\textwidth}  % 左侧栏
         \section*{\normalsize\textbf{\textcolor{truepurple}{社团理念}}}
         \vspace{-1em}
         \subsection*{\normalsize\textbf{\textcolor{thuorange}{Core Concepts}}}
@@ -46,8 +41,8 @@
 
         
     \end{minipage}
-    \hfill
-    \begin{minipage}[t]{0.5\textwidth}
+    \hfill  % 填充两栏之间的空间
+    \begin{minipage}[t]{0.5\textwidth}  % 右侧栏
         \section*{\normalsize\textbf{\textcolor{truepurple}{职能部门}}}
         \vspace{-1em}
         \subsection*{\normalsize\textbf{\textcolor{thuorange}{Functional Department}}}
@@ -64,19 +59,19 @@
     \end{minipage}
 \end{flushleft}
 
-\vfill
+\vfill  % 填充垂直空间
 
-\vspace{0.5cm}
-% 底部荣誉信息
+\vspace{0.5cm}  % 间距调整
+% 社团荣誉部分
 \begin{center}
-    \Large\textbf{\textcolor{truepurple}{社团荣誉}}
-    \\[0ex]
-    \large\textbf{\textit{\textcolor{thuorange}{Club Honors}}}
+    \Large\textbf{\textcolor{truepurple}{社团荣誉}}  % 中文标题
+    \\[0ex]  % 标题间距
+    \large\textbf{\textit{\textcolor{thuorange}{Club Honors}}}  % 英文标题
 \end{center}
 
-\vspace{0.5cm}
+\vspace{0.5cm}  % 间距调整
 \begin{flushleft}
-    \begin{itemize}
+    \begin{itemize}  % 荣誉列表
         \item[] \normalsize\textbf{2017-2018学年} \qquad 清华大学\textbf{十佳学生社团}
         \item[] \normalsize\textbf{2018-2019学年} \qquad 清华大学\textbf{十佳学生社团}
         \item[] \normalsize\textbf{2019-2020学年} \qquad 清华大学\textbf{十佳学生社团} “ 星空杯 ”
@@ -89,18 +84,21 @@
 \end{flushleft}
 
 \vfill
-\newpage
+% 部门列表部分
+\newpage  % 新的一页
 \begin{center}
     \fontsize{30pt}{32pt}\selectfont
-    \textbf{\textcolor{truepurple}{部门全表}}
-    \\[0ex]
+    \textbf{\textcolor{truepurple}{部门全表}}  % 中文标题
+    \\[0ex]  % 标题间距
     \fontsize{18pt}{20pt}\selectfont
-    \textcolor{thuorange}{Department List}
+    \textcolor{thuorange}{Department List}  % 英文标题
 \end{center}
-\flushleft
-\begin{multicols}{3}
+\flushleft  % 左对齐
+\begin{multicols}{3}  % 三栏布局
     
-    \begin{categorysection}{组织部门}
+    % 使用categorysection环境组织部门分类
+    % 每个分类使用一个categorysection环境
+    \begin{categorysection}{组织部门}  % 分类标题
         \item 次世代2024-2026组织部
     \end{categorysection}
     
@@ -434,6 +432,9 @@
         \vspace{0.4em}
     \end{minipage}
     }
+% 聊天对话部分
+% 使用chatbubble命令创建对话气泡
+% 语法：\chatbubble[位置]{头像}{昵称}{内容}{背景色}
 \newpage 
 \chatbubble[left]{taozi.png}{桃子没有在摸鱼}{%
 大家好，这里是次世代的初代看板娘桃子\~{}
@@ -490,7 +491,7 @@
 \chatbubble[left]{guitarhero.png}{吉他英雄}{
   加入动漫社……是不是意味着要参加好多好多线下活动?要自我介绍?要上舞台?
   这个绝对做做做做做做做做不到!
-}{gray!5!white}
+}{default}
 
 % 右侧聊天（用户B）
 \chatbubble[right]{taozi.png}{12-桃子}{
@@ -499,5 +500,3 @@
  一枚静静的观众，或在群聊里默
  默收集好看的图片也都没问题!我们的宗旨就是玩得开心\~{}
 }{tao}
-\newpage
-哇袄
