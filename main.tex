@@ -22,12 +22,14 @@
 \usepackage{setspace}
 \usepackage{textcomp}
 %\usepackage{showframe}
+\usepackage{pifont}
 \usepackage{fancyhdr}
 \usepackage{comment}
 \usepackage{adjustbox}
 \usepackage{eso-pic}
 \usepackage{ragged2e}
 \usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
 \usepackage{multicol}
 \usepackage{enumitem}
 \newenvironment{categorysection}[1]{
@@ -150,7 +152,26 @@
     }%
   \par\vspace{0.1cm}% 气泡间距
 }
+\newcommand{\picbox}[1]{%
+\vspace{0.3em}
 
+    \begin{tikzpicture}
+        \node[
+            trapezium, 
+            draw=truepurple, 
+            fill=truepurple!80!black, 
+            text=white, 
+            inner sep=3pt, 
+            minimum width=0.8\linewidth, % 宽度为行宽的80%
+            minimum height=0.3cm, 
+            trapezium left angle=90, % 左边直角
+            trapezium right angle=65, % 右边角度
+            trapezium stretches=true, % 允许拉伸
+            align=left % 文本居左
+        ] 
+        {#1};
+    \end{tikzpicture}%
+}
 % 设置页眉页脚样式
 \pagestyle{fancy}  % 使用fancy页眉页脚样式
 \fancyhf{} % 清空所有页眉页脚默认设置
@@ -225,12 +246,9 @@
 
 % 引入第一章内容
 \newpage  % 新的一页
-\input{chapters/1_introduction.tex}  % 引入章节文件
+\input{chapters/1_introduction.tex} 
 \newpage
-\begin{center}
-    % 主标题
-    \fontsize{90pt}{92pt}\selectfont
-    \textbf{哇袄}
+\input{chapters/4_departments.tex}  % 引入章节文件
+\newpage
 
-\end{center}
 \end{document}
