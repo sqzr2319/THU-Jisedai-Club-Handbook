@@ -1,5 +1,6 @@
 \documentclass[twoside,12pt]{book}
-
+\usepackage{fontspec} 
+\setmainfont{Arial Unicode MS}
 % 中文支持设置
 % 使用ctex包但不使用默认字体设置(fontset=none)
 \usepackage[fontset=none]{ctex}
@@ -9,6 +10,7 @@
   ItalicFont = KaiTi,
   BoldItalicFont = KaiTi
 ]
+
 % 加载常用包
 \usepackage{tcolorbox}  % 彩色文本框支持
 \tcbuselibrary{skins, breakable}  % 加载tcolorbox的皮肤和断页功能
