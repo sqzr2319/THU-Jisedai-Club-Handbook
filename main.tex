@@ -2,7 +2,8 @@
 \usepackage{fontspec} 
 \usepackage[utf8]{inputenc} 
 \newfontfamily{\arial}{Arial Unicode MS}
-
+\newfontfamily\EmojiFont{Segoe UI Emoji}[Renderer=Harfbuzz]
+\newcommand{\emoji}[1]{{\EmojiFont #1}}
 % 默认字体保持LaTeX标准设置
 % 中文支持设置
 % 使用ctex包但不使用默认字体设置(fontset=none)
@@ -106,7 +107,7 @@
         \vspace{5pt}
         \begin{tcolorbox}[
           enhanced,
-          breakable,
+          breakable=false,
           colback={#5},
           colframe={#5},
           arc=8pt,
@@ -117,7 +118,8 @@
           bottom=4pt,
           before skip=0pt,
           after skip=10pt,
-          width=\linewidth
+          width=\linewidth,
+          before upper={\setlength{\parindent}{0em} \setlength{\parskip}{0pt}},
         ]
           #4
         \end{tcolorbox}
@@ -132,7 +134,7 @@
         \hfill%
         \begin{tcolorbox}[
           enhanced,
-          breakable,
+          breakable=false,
           colback={#5},
           colframe={#5},
           arc=8pt,
@@ -143,7 +145,8 @@
           bottom=4pt,
           before skip=0pt,
           after skip=10pt,
-          width=\linewidth
+          width=\linewidth,
+          before upper={\setlength{\parindent}{0em} \setlength{\parskip}{0pt}},
         ]
           #4
         \end{tcolorbox}
@@ -256,7 +259,8 @@
 \input{chapters/1_introduction.tex} 
 \newpage
 \arial
-\input{chapters/4_departments.tex}  % 引入章节文件
+\input{chapters/4_departments.tex}  
+\input{chapters/5_messages.tex}
 \newpage
 
 \end{document}
