@@ -1,7 +1,9 @@
 \documentclass[twoside,12pt]{book}
 \usepackage{fontspec} 
 \usepackage[utf8]{inputenc} 
-\setmainfont{Arial Unicode MS}
+\newfontfamily{\arial}{Arial Unicode MS}
+
+% 默认字体保持LaTeX标准设置
 % 中文支持设置
 % 使用ctex包但不使用默认字体设置(fontset=none)
 \usepackage[fontset=none]{ctex}
@@ -20,6 +22,8 @@
 \graphicspath{{figures/},{figures/大部门/},{figures/小部门/},{figures/看板/},{figures/头像/},{figures/部酱/},{figures/页眉页脚/}}  % 设置图片路径为figures目录
 % 颜色和页面布局设置
 \usepackage{xcolor}  % 颜色支持
+\usepackage{wrapfig}  % 文字环绕图片支持
+\usepackage{floatflt}
 \usepackage{eso-pic}  % 页面背景支持
 \usepackage{geometry}  % 页面布局设置
 \usepackage{setspace}
@@ -251,6 +255,7 @@
 \newpage  % 新的一页
 \input{chapters/1_introduction.tex} 
 \newpage
+\arial
 \input{chapters/4_departments.tex}  % 引入章节文件
 \newpage
 
