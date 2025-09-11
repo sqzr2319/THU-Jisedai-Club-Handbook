@@ -17,6 +17,7 @@
 
 % 加载常用包
 \usepackage{tcolorbox}  % 彩色文本框支持
+\usepackage{ulem}
 \tcbuselibrary{skins, breakable}  % 加载tcolorbox的皮肤和断页功能
 \usepackage{tikz}  % 绘图支持
 \usepackage{graphicx}  % 图片插入支持
@@ -54,7 +55,7 @@
 \usetikzlibrary{calc,positioning}
 \usetikzlibrary{shapes, arrows}  
 
-\geometry{a4paper, left=1.5cm, right=1.5cm, top=2cm, bottom=3cm}
+\geometry{a4paper, left=1.5cm, right=1.5cm, top=2cm, bottom=2.5cm}
 % 设置无衬线中文字体为黑体
 \setCJKsansfont{SimHei}
 
@@ -196,9 +197,9 @@
 
 % 设置页脚
 % LE: 偶数页左侧页脚
-\fancyfoot[LE]{\hspace{-0.3cm}\raisebox{-27pt}{\textcolor{white}{\textbf{\textsf{\thepage}}}}} 
+\fancyfoot[LE]{\hspace{-0.3cm}\raisebox{-13pt}{\textcolor{white}{\textbf{\textsf{\thepage}}}}} 
 % RO: 奇数页右侧页脚
-\fancyfoot[RO]{\rlap{\hspace{-0.15cm}\raisebox{-27pt}{\textcolor{white}{\textbf{\textsf{\thepage}}}}}}
+\fancyfoot[RO]{\rlap{\hspace{-0.15cm}\raisebox{-13pt}{\textcolor{white}{\textbf{\textsf{\thepage}}}}}}
 \renewcommand{\footrulewidth}{0pt}  % 移除页脚分隔线
 
 % 添加页面背景图片
