@@ -1,3 +1,10 @@
+\clearpage
+\newpage % 开始新的一页
+    \thispagestyle{empty} % 移除本页的页眉和页脚[8,9](@ref)
+    \newgeometry{margin=0pt} % 临时将本页的页边距全部设置为0[1](@ref)
+    \noindent % 防止缩进
+    \includegraphics[width=0.9999\paperwidth, height=0.9999\paperheight]{ch5.png} % 插入图片，使其尺寸与纸张大小一致并保持宽高比[1](@ref)
+    \restoregeometry % 恢复原来的页边距设置
 \newpage
 \normalsize
 

@@ -28,6 +28,11 @@
 % 加载常用包
 \usepackage{tcolorbox}  % 彩色文本框支持
 \usepackage{ulem}
+\usepackage{silence}
+\WarningFilter{latex}{Overfull \hbox}
+\usepackage[absolute, overlay]{textpos}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
 \tcbuselibrary{skins, breakable}  % 加载tcolorbox的皮肤和断页功能
 \usepackage{tikz}  % 绘图支持
 \usepackage{afterpage}
@@ -269,9 +274,9 @@
 
 \input{chapters/1_introduction.tex}  % 第一章：社团介绍
 \input{chapters/2_activities.tex}  % 第二章：主要活动介绍
-\input{chapters/3_qa.tex}  % 第三章：社团Q&A
-\input{chapters/4_departments.tex}  % 第四章：分部介绍
-\input{chapters/5_messages.tex}  % 第五章：社员寄语
+%\input{chapters/3_qa.tex}  % 第三章：社团Q&A
+%\input{chapters/4_departments.tex}  % 第四章：分部介绍
+%\input{chapters/5_messages.tex}  % 第五章：社员寄语
 \newpage
 
 \end{document}
