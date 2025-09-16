@@ -1,0 +1,178 @@
+\documentclass[twoside,12pt]{book}
+\usepackage{fontspec} 
+\usepackage[utf8]{inputenc} 
+\newfontfamily{\arial}{Arial Unicode MS}
+\newfontfamily\EmojiFont{Segoe UI Emoji}[Renderer=Harfbuzz]
+\newcommand{\emoji}[1]{{\EmojiFont #1}}
+% 默认字体保持LaTeX标准设置
+% 中文支持设置
+% 使用ctex包但不使用默认字体设置(fontset=none)
+\usepackage[fontset=none]{ctex}
+% 设置中文字体：宋体为主字体，黑体为粗体，楷体为斜体
+\setCJKmainfont{SimSun}[
+  BoldFont = SimHei,
+  ItalicFont = KaiTi,
+  BoldItalicFont = KaiTi
+]
+
+% 加载常用包
+\usepackage{tcolorbox}  % 彩色文本框支持
+\usepackage{ulem}
+\tcbuselibrary{skins, breakable}  % 加载tcolorbox的皮肤和断页功能
+\usepackage{tikz}  % 绘图支持
+\usepackage{graphicx}  % 图片插入支持
+\graphicspath{{figures/},{figures/部门1/},{figures/部门2/},{figures/看板/},{figures/头像/},{figures/部酱/},{figures/页眉页脚/}}  % 设置图片路径为figures目录
+% 颜色和页面布局设置
+\usepackage{xcolor}  % 颜色支持
+\usepackage{wrapfig}  % 文字环绕图片支持
+\usepackage{floatflt}
+\usepackage{eso-pic}  % 页面背景支持
+\usepackage{geometry}  % 页面布局设置
+\usepackage{setspace}
+\usepackage{textcomp}
+%\usepackage{showframe}
+\usepackage{pifont}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage{adjustbox}
+\usepackage{eso-pic}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usepackage{multicol}
+\usepackage{enumitem}
+\newenvironment{categorysection}[1]{
+  \subsection*{\textcolor{truepurple}{#1}}
+  \begin{itemize}[leftmargin=*, 
+                 nosep,               % 移除所有额外间距
+                 itemsep=2pt,         % 条目间距=0
+                 parsep=0pt,          % 段落间距=0
+                 before=\setlength{\baselineskip}{23pt} % 设置行距
+  ]
+}{
+  \end{itemize}
+}
+\usetikzlibrary{calc,positioning}
+\usetikzlibrary{shapes, arrows}  
+
+\geometry{a4paper, left=1.5cm, right=1.5cm, top=2cm, bottom=2.5cm}
+% 设置无衬线中文字体为黑体
+\setCJKsansfont{SimHei}
+
+% 定义文档使用的颜色
+\definecolor{truepurple}{RGB}{128, 0, 128}  % 主色调紫色
+\definecolor{taopink}{HTML}{F17F98}  % 桃子名字
+\definecolor{tao}{HTML}{FFF2F9}  % 桃子气泡
+\definecolor{zi}{HTML}{F8F2F9}  % 紫荆气泡
+\definecolor{qing}{HTML}{F2F9EA}  % 清芬气泡
+\definecolor{default}{HTML}{683A75} 
+ %默认气泡灰
+% 加载tikz的渐变效果库
+\usetikzlibrary{fadings}
+
+% 页面布局设置
+\geometry{
+  top=1.5cm,       % 从3cm减小到1.5cm
+  headheight=20.57637pt, % 解决fancyhdr警告
+  headsep=10pt,     % 增加页眉与正文间距
+  footskip=30pt     % 增加页脚与正文间距
+}
+
+% 定义聊天气泡样式
+% 使用说明：
+% \chatbubble[位置]{头像路径}{昵称}{消息内容}{背景颜色}
+% 可选参数：
+% [left] - 左侧气泡（默认）
+% [right] - 右侧气泡
+% 示例：
+% \chatbubble[left]{taozi.png}{桃子}{消息内容}{tao}
+% \chatbubble[right]{zijing.png}{紫荆}{消息内容}{zi}
+% \chatbubble[right]{qingfen.png}{清芬}{消息内容}{qing}
+\newcounter{chatcounter}
+\newcommand{\chind}{\hspace*{2em}}
+\newcommand{\chatbubble}[3][left]{%
+  \stepcounter{chatcounter}%
+  \par\noindent%
+  \ifstrequal{#1}{left}
+    {% 左侧气泡
+     \begin{minipage}[t]{1.2cm} % 头像宽度
+        \begin{tikzpicture}[baseline=(current bounding box.center)]
+          \node[circle, draw=gray!50, line width=0.5pt, minimum size=1.2cm, 
+                path picture={\node at (path picture bounding box.center) 
+                {\includegraphics[width=1.2cm]{#2}};}] {};
+        \end{tikzpicture}
+     \end{minipage}%
+     \hspace{0.2cm}%
+     \begin{minipage}[t]{0.7\textwidth} % 消息框宽度
+        \vspace{-15pt} % 确保顶部对齐 % 昵称
+        \begin{tcolorbox}[
+          enhanced,
+          breakable=false,
+          colback={default},
+          colframe={default},
+          arc=8pt,
+          boxrule=0.5pt,
+          left=8pt,
+          right=8pt,
+          top=4pt,
+          bottom=4pt,
+          before skip=0pt,
+          after skip=10pt,
+          width=\linewidth,
+          before upper={\setlength{\parindent}{0em} \setlength{\parskip}{0pt}},
+        ]
+          \textcolor{white}{#3}
+        \end{tcolorbox}
+     \end{minipage}
+    }
+    {% 右侧气泡
+     \hfill%
+     \begin{minipage}[t]{0.7\textwidth} % 消息框宽度
+        \vspace{-15pt} % 确保顶部对齐
+        \hfill%
+        \begin{tcolorbox}[
+          enhanced,
+          colback={default},
+          colframe={default},
+          arc=8pt,
+          boxrule=0.5pt,
+          left=8pt,
+          right=8pt,
+          top=4pt,
+          bottom=4pt,
+          before skip=0pt,
+          after skip=10pt,
+          width=\linewidth,
+          before upper={\setlength{\parindent}{0em} \setlength{\parskip}{0pt}},
+        ]
+          \textcolor{white}{#3}
+        \end{tcolorbox}
+     \end{minipage}%
+     \hspace{0.2cm}%
+     \begin{minipage}[t]{1.2cm} % 头像宽度
+        \begin{tikzpicture}[baseline=(current bounding box.center)]
+          \node[circle, draw=gray!50, line width=0.5pt, minimum size=1.2cm, 
+                path picture={\node at (path picture bounding box.center) 
+                {\includegraphics[width=1.2cm]{#2}};}] {};
+        \end{tikzpicture}
+     \end{minipage}
+    }%
+  \par\vspace{0.1cm}% 气泡间距
+}
+
+\definecolor{mybg}{HTML}{5C2E68}
+\begin{document}
+\pagecolor{mybg}
+\chatbubble[left]{qingfen.png}{锵锵锵！迎面走来的是次世代引以为傲的各大部门！}
+\chatbubble[right]{taozi.png}{分部是次世代最主要的组织形式和活动载体。
+我们的分部是如此众多，以至于大家常常戏称次世代在百团大战之后，
+还要进行“百部大战”呢～}
+\chatbubble[left]{qingfen.png}{这里仅仅展示了分部中的一小部分，手册前页与社团主群群文件都有最最详尽的分部全表！只需要加入主群，在群文件里找到“部门群号总索引”，就可以快速入股自己心仪的部门了！}
+\chatbubble[right]{zijing.png}{别忘了，可以“三人成部”。欢迎建设属于你的全新部门。}
+\chatbubble[left]{taozi.png}{清芬酱刚加入的时候，可是一肚子问题的好奇宝宝呢～}
+\chatbubble[right]{zijing.png}{是啊。}
+\chatbubble[left]{qingfen.png}{诶嘿嘿……因为当时这里的一切都让我感到新鲜和喜欢嘛！好在次世代的大家都是好人，大家对社团生活无论有什么问题，都放心大胆地尽管提问吧！}
+\chatbubble[right]{zijing.png}{这不是嘛，这儿有新人来了。}
+\end{document}
+
+

@@ -1,3 +1,11 @@
+\clearpage
+\newpage % 开始新的一页
+    \thispagestyle{empty} % 移除本页的页眉和页脚[8,9](@ref)
+    \newgeometry{margin=0pt} % 临时将本页的页边距全部设置为0[1](@ref)
+    \noindent % 防止缩进
+    \includegraphics[width=0.9999\paperwidth, height=0.9999\paperheight]{ch3.png} % 插入图片，使其尺寸与纸张大小一致并保持宽高比[1](@ref)
+    \restoregeometry % 恢复原来的页边距设置
+
 \chatbubble[left]{qiya.jpg}{奇犽}{
  次世代有哪些活动？
 }{default}
@@ -83,5 +91,3 @@
  联动的常客，荷月玩偶社、学生科幻协会等都曾是我们的联动对象。此外，学生电子音乐协会、学生推理协会
  也曾和我们有过合作。如果有任何想要进行外社联动的想法，欢迎联络组织部。
 }{zi}
-
-\newpage

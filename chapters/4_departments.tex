@@ -1,3 +1,10 @@
+\clearpage
+\newpage % 开始新的一页
+    \thispagestyle{empty} % 移除本页的页眉和页脚[8,9](@ref)
+    \newgeometry{margin=0pt} % 临时将本页的页边距全部设置为0[1](@ref)
+    \noindent % 防止缩进
+    \includegraphics[width=0.9999\paperwidth, height=0.9999\paperheight]{ch4.png} % 插入图片，使其尺寸与纸张大小一致并保持宽高比[1](@ref)
+    \restoregeometry % 恢复原来的页边距设置
 \arial
 \newpage
 \fontsize{23pt}{24pt}\selectfont
@@ -92,7 +99,7 @@
 \adjustbox{valign=t}{
 	\begin{minipage}[t]{0.68\textwidth}
 		\normalsize
-		\chind 你想在大学时光里尽情挥洒自己的绘画创造力吗，来绘画部就对了！这里不仅有画技点满的太太，也有刚开始接触绘画的小白，不管你是想提高画技还是画同人还是造oc，在这里都有属于你的一片天地。\\
+		\chind 你想在大学时光里尽情挥洒自己的绘画创造力吗，来绘画部就对了！这里不仅有画技点满的太太，也有刚开始接触绘画的小白，不管你是想提高画技还是画同人还是造oc，抑或绘制海报和参加原创本，在这里都有属于你的一片天地。\\
 		\chind 绘画部的活动包括但不限于线上活动：画图发图传相册、复读水群、夸夸或者被夸夸、不同形式的绘画接龙、出同人本，不过这些都是线上活动，说到线下活动当然少不了茶绘！大家可以带上自己的设备和工具，来线下面基聊天画画，还可以玩
 		桌游，总之是十分欢乐的活动！\\
 	\end{minipage}
@@ -103,7 +110,7 @@
 	\begin{minipage}[t]{0.6\textwidth}
 		\normalsize
 		\chind 如果你想要在群内展示自己的作品，可以自行创建属于自己的群相册~方便大家夸夸！\\
-		\chind 绘画部在主视觉的绘制上也有十分悠久的历史了，就连大家熟知的rella蘑菇太太也在绘画部为动漫社画过活动海报，机会多多，大家可以毛遂自荐！
+		\chind 绘画部在社团主视觉的绘制上也有十分悠久的历史了，就连大家熟知的rella蘑菇太太也在绘画部为动漫社画过活动海报，机会多多，大家可以毛遂自荐！
 
 	\end{minipage}
 }
@@ -132,7 +139,7 @@
 		\chind 总而言之，在绘画部这个温暖的集体里，大家可以尽情交流有关绘画的问题，
 		群内也有着十分珍贵的学习资料（正经）供大家学习，也可以在这里寻找同担，
 		共同交流互绘oc同人，时不时吃吃群里其他太太做出香香的饭，请感兴趣的同学加入吧！\\
-		\chind（ps：群内严禁出现ai绘画等话题）
+		\chind（ps：群内禁发涩图和ai图，讨论ai绘画请移步别处）
 
 		\raisebox{-\height}{
 			\includegraphics[width=0.9\linewidth]{绘画部3.png}}
@@ -414,6 +421,18 @@
 		\picbox{\small ~\ding{115} ~ 神秘合照~}
 	\end{minipage}%
 }
+\newpage
+\vspace{-1em}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[
+    page=1,          % 选择 PDF 的第 2 页（默认为第 1 页）
+    width=\textwidth, % 按宽度缩放
+    trim=10 20 10 20,    % 裁剪边距（左 下 右 上，单位 pt）
+    clip                % 启用裁剪
+  ]{V＋部.pdf}
+  \label{fig:pdfpage}
+\end{figure}
 %
 %
 %地下live部
@@ -468,18 +487,7 @@
 		\chind \textbf{イエタイガー！！}
 	\end{minipage}
 }
-\newpage
-\vspace{-1em}
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[
-    page=1,          % 选择 PDF 的第 2 页（默认为第 1 页）
-    width=\textwidth, % 按宽度缩放
-    trim=10 20 10 20,    % 裁剪边距（左 下 右 上，单位 pt）
-    clip                % 启用裁剪
-  ]{V＋部.pdf}
-  \label{fig:pdfpage}
-\end{figure}
+
 %——————————————作品类————————————%
 %
 %
@@ -600,10 +608,69 @@
 }
 \newpage
 \fontsize{23pt}{24pt}\selectfont
-\textbf{\textcolor{truepurple}{次世代京阿尼部}}\\
-\vspace{0.7em}
+\textbf{\textcolor{truepurple}{次世代逆转裁判部}}\\
+\vspace{0.3em}
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.2\textwidth}
+		\vspace{-0.2em}
+		\raisebox{-\height}[0pt][0pt]{
+			\includegraphics[width=1.1\linewidth]{逆转裁判部.jpg}}
+	\end{minipage}%
+}
+\hfill
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.7\textwidth}
+		\normalsize
+		\chind 一斤鸭梨！这里是次世代逆转裁判部，群内分享群友刷到的梗图、新周边和ONLY展相关信息，可以约着去展子，总之欢迎加入一起打官司（不是）
+\\
+	\end{minipage}
+}
+\par
+\vspace*{1em}
+\fontsize{23pt}{24pt}\selectfont
+\textbf{\textcolor{truepurple}{次世代京都动画部(京阿尼部)}}\\
+\vspace{0.3em}
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.46\textwidth}
+		\normalsize
+		\chind \textbf{培育梦想、描绘梦想、传递梦想、实现梦想的会社。}\\
+		\chind 欢迎来到京阿尼部！京都动画（昵称“京阿尼”）是一家以其深刻的情感表达、独特的日常系叙事、
+		标志性的细腻表演与作画、品味永远在线的音乐……闻名于世的日本动画公司。
+		在这二十余年的发展历程中，京阿尼给世界带来了数不清的精彩。\\
+		\chind 既有《冰菓》《紫罗兰永恒花园》
+		这样脍炙人口的大众作品，也有《Kanon》《全金属》这样的小\scriptsize{中(？)}\normalsize 众精品；既有《幸运星》《
+		轻音少女》《Clannad》这样的永恒经典，也有《小城日常》的全新感动……由此，形成了
+		京阿尼在动画公司中独有的一份高粘度的粉丝群体，与活跃和谐的讨论二创氛围。
+		\vspace{-0.5em}
+		\raisebox{-\height}{
+			\includegraphics[width=\linewidth]{京阿尼部2.jpg}}
+	\end{minipage}}
+\hfill
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.46\textwidth}
+		\vspace{-0.5em}
+		\hspace{-1em}
+		\raisebox{-\height}{
+		\includegraphics[width=\linewidth]{京阿尼部1.png}}
+		\par
+		\vspace*{0.5em}
+		\hspace{-1em}
+		\normalsize
+		\chind 线上当然是水群啦，动画讨论、角色庆生、\sout{吹学}都是常见的话题。大
+		家的厨力让群聊乐趣多多，我们建设了每个作品的群相册，不时上传好看的二创，
+		活动，周边，圣地巡礼照片…以及当然有新动画的实时讨论～\\
+		\chind 没错，我们有线下活动，还不少！我们经常性地和放映组合作，
+		放映京阿尼的经典剧场版动画，2025年暑假更是进行了《小城日常》的每周放映聚众追番；
+		鉴赏帝玖、星玖乐团的二次元交响乐，京阿尼专场纯k唱歌，《你的颜色》院线观影……\\
+		\end{minipage}%
+}
+\par
+\normalsize
+或许你对京阿尼的认知仅限于“京都脸”，又或许你已经是老京蜜了，\\
+无论如何我们都欢迎你的加入，京アニの世界へようこそ！
+\raisebox{-\height}{
+\includegraphics[width=\linewidth]{京阿尼部3.png}}
 %——————————————游戏类————————————%
-
 %
 %
 %mc部
@@ -849,14 +916,26 @@
 
 \vspace{2em}
 \fontsize{23pt}{24pt}\selectfont
-\textbf{\textcolor{truepurple}{次世代星露谷物语部}}\\
+\textbf{\textcolor{truepurple}{次世代魂游部}}\\
+\par
 \vspace{0.2em}
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.45\textwidth}
 \normalsize
-\chind 你说得对，但是星露谷物语是一个牧场类的RPG游戏，你继承了爷爷在星露谷的农场，
-但是你手头上只有最基础的农具和少许金钱，你得靠此开始你的新生活。
-你能把这片杂草丛生的田地变成繁荣的家园吗？\\
-\chind 欢迎各位老乡加入，也欢迎感兴趣准备入手的新玩家捏～
+\chind 欢迎加入次世代魂游部！\\
+\chind 登上柏雷塔尼亚王城，飘向北方不死院；走遍多兰古雷格大陆，深入亚楠的噩梦；踏上洛斯里克高墙，眺望苇名国的落日；修复艾尔登的黄金律法，在宁姆韦德的黑夜中厮杀……在From Software创造的世界中冒险，体验魂类游戏独特的惊险与惊艳，Long may the sunshine！\\
 
+	\end{minipage}
+}
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.45\textwidth}
+		\vspace{-0.2em}
+		\raisebox{-\height}[0pt][0pt]{
+			\includegraphics[width=\linewidth]{魂游部.png}}
+	\end{minipage}%
+}
+\normalsize
+\chind P.S.二次元魂游《无限机兵》是次世代社友的优秀作品，欢迎游玩desuwa！
 \par
 \vspace{2em}
 \fontsize{23pt}{24pt}\selectfont
@@ -1023,8 +1102,79 @@
 		\picbox{\small ~~\ding{115} ~ 明星小猫伏地（箱）魔~}
 	\end{minipage}%
 }
+\newpage
+\fontsize{23pt}{24pt}\selectfont
+\textbf{\textcolor{truepurple}{次世代动画研究部}}\\
+\vspace{0.7em}
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.43\textwidth}
+		\vspace{-0.2em}
+		\raisebox{-\height}[0pt][0pt]{
+			\includegraphics[width=1.1\linewidth]{动研部.png}}
+	\end{minipage}%
+}
+\hfill
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.47\textwidth}
+		\normalsize
+		\chind 大家好啊!这里是次世代动画研究部,简称动研部。\\
+     \chind 既然都来到了次世代动漫社，怎么能没有动画讨论相关的部门。本部门的主要活动是番剧研讨（水群），每个季度都会有一场新番研讨会用于总结（拷打）上季度动画以及对当季度动画的前瞻（毒奶），如图所示。另外，本部门也会不定期于次世代动漫社的公众号发表新番点评。\\
+	\end{minipage}
+}
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.47\textwidth}
+		\normalsize
+		\chind 在本部门，不论是新番的实时讨论，还是对老番的怀旧，抑或是对动画制作、剧情、演出的深入探讨，你都可以畅所欲言。哪怕你没怎么看过动画，也会有热心群友向你安利，助你入门。\\
+		\chind 总之，欢迎各位新同学加入动研部，我们欢迎你的到来！\\
+	\end{minipage}
+}
+\hfill
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.43\textwidth}
+		\vspace{-0.2em}
+		\hspace*{-1em}
+		\raisebox{-\height}[0pt][0pt]{
+			\includegraphics[width=1.1\linewidth]{动研部2.png}}
+	\end{minipage}%
+}
 
-
+\fontsize{23pt}{24pt}\selectfont
+\textbf{\textcolor{truepurple}{次世代同人文部}}\\
+\vspace{0.7em}
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.2\textwidth}
+		\vspace{-0.2em}
+		\raisebox{-\height}[0pt][0pt]{
+			\includegraphics[width=1.1\linewidth]{同人文部.jpg}}
+	\end{minipage}%
+}
+\hfill
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.7\textwidth}
+		\normalsize
+		\chind 虽然是小小的新群，但还是欢迎各位同人爱好者的加入！无论是写原作向还是if线，短篇段子还是长篇连载，喜欢发糖还是写刀子，都欢迎加入同人文部～
+\\
+	\end{minipage}
+}
+\par
+\vspace{1em}
+\fontsize{23pt}{24pt}\selectfont
+\textbf{\textcolor{truepurple}{次世代Kigurumi部}}\\
+\vspace{0.7em}
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.3\textwidth}
+		\vspace{-0.2em}
+		\raisebox{-\height}[0pt][0pt]{
+			\includegraphics[width=1.1\linewidth]{kig部.jpg}}
+	\end{minipage}%
+}
+\hfill
+\adjustbox{valign=t}{
+	\begin{minipage}[t]{0.6\textwidth}
+		\normalsize
+		\chind 本群欢迎一切新老师生、教工、校友加入，畅聊Kigurumi文化，玩一辈子塑料大头x\\
+	\end{minipage}
+}
 \newpage
 \fontsize{23pt}{24pt}\selectfont
 \textbf{\textcolor{truepurple}{次世代心憩部}}\\
@@ -1120,9 +1270,9 @@
 		\vspace{-0.2em}
 		\raisebox{-\height}[0pt][0pt]{
 			\includegraphics[width=\linewidth]{日语学习部.png}}
-
 	\end{minipage}
 }
+
 
 
 
