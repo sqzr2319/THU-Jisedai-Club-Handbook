@@ -86,6 +86,13 @@
 \vfill
 % 部门列表部分
 \newpage  % 新的一页
+\normalsize
+    \thispagestyle{empty} % 移除本页的页眉和页脚[8,9](@ref)
+    \newgeometry{margin=0pt} % 临时将本页的页边距全部设置为0[1](@ref)
+    \noindent % 防止缩进
+    \includegraphics[width=0.9999\paperwidth, height=0.9999\paperheight]{ch1.jpg} % 插入图片，使其尺寸与纸张大小一致并保持宽高比[1](@ref)
+    \restoregeometry % 恢复原来的页边距设置
+\newpage
 \begin{center}
     \fontsize{30pt}{32pt}\selectfont
     \textbf{\textcolor{truepurple}{部门全表}}  % 中文标题
