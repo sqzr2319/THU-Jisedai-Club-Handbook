@@ -18,6 +18,8 @@ def add_covers(input_pdf_path, cover_img_path, backcover_img_path, output_pdf_pa
     # 创建空白页
     blank_buffer = BytesIO()
     c = canvas.Canvas(blank_buffer, pagesize=A4)
+    img = ImageReader(os.path.join(current_dir, "op.jpg"))
+    c.drawImage(img, 0, 0, width=A4[0], height=A4[1], preserveAspectRatio=False)
     c.showPage()
     c.save()
     

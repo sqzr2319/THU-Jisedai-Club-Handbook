@@ -9,7 +9,7 @@
 % 使用ctex包但不使用默认字体设置(fontset=none)
 \usepackage[fontset=none]{ctex}
 % 设置中文字体：宋体为主字体，黑体为粗体，楷体为斜体
-\setCJKmainfont{SimSun}[
+\setCJKmainfont{SimHei}[
   BoldFont = SimHei,
   ItalicFont = KaiTi,
   BoldItalicFont = KaiTi
@@ -66,6 +66,7 @@
 \definecolor{zi}{HTML}{F8F2F9}  % 紫荆气泡
 \definecolor{qing}{HTML}{F2F9EA}  % 清芬气泡
 \definecolor{default}{HTML}{683A75} 
+\definecolor{thuorange}{RGB}{247, 148, 29}
  %默认气泡灰
 % 加载tikz的渐变效果库
 \usetikzlibrary{fadings}
@@ -85,9 +86,9 @@
 % [left] - 左侧气泡（默认）
 % [right] - 右侧气泡
 % 示例：
-% \chatbubble[left]{taozi.png}{桃子}{消息内容}{tao}
-% \chatbubble[right]{zijing.png}{紫荆}{消息内容}{zi}
-% \chatbubble[right]{qingfen.png}{清芬}{消息内容}{qing}
+% \chatbubble[left]{taozi.jpg}{桃子}{消息内容}{tao}
+% \chatbubble[right]{zijing.jpg}{紫荆}{消息内容}{zi}
+% \chatbubble[right]{qingfen.jpg}{清芬}{消息内容}{qing}
 \newcounter{chatcounter}
 \newcommand{\chind}{\hspace*{2em}}
 \newcommand{\chatbubble}[3][left]{%
@@ -161,19 +162,16 @@
 }
 
 \definecolor{mybg}{HTML}{5C2E68}
+
 \begin{document}
 \pagecolor{mybg}
-\chatbubble[left]{qingfen.png}{不愧是次世代！}
-\chatbubble[left]{taozi.png}{不愧是次世代～}
-\chatbubble[right]{zijing.png}{不愧是次世代。}
-\chatbubble[left]{taozi.png}{嘿嘿，不知不觉和大家创造了这么多回忆呢……}
-\chatbubble[left]{qingfen.png}{还想在未来创造更多更多！就和你一起！}
-\chatbubble[right]{zijing.png}{我们希望与你度过更长的时光。}
-\chatbubble[left]{taozi.png}{那么接下来，就让我们携手同行吧。}
-\chatbubble[right]{zijing.png}{这不是嘛，这儿有新人来了。}
-\chatbubble[right]{zijing.png}{编写这本手册的时候，我们收到了许许多多老朋友的祝福。}
-\chatbubble[left]{taozi.png}{果然加入次世代就是一辈子的社员呢～}
-\chatbubble[right]{qingfen.png}{当然也有不少现在的活跃社友和新朋友呢。一起继续创造更多的回忆吧！}
+\chatbubble[left]{qingfen.jpg}{不愧是次世代！}
+\chatbubble[left]{taozi.jpg}{不愧是次世代～}
+\chatbubble[right]{zijing.jpg}{不愧是次世代。}
+\chatbubble[left]{taozi.jpg}{嘿嘿，不知不觉和大家创造了这么多回忆呢……}
+\chatbubble[left]{qingfen.jpg}{还想在未来创造更多更多！就和你一起！}
+\chatbubble[right]{zijing.jpg}{我们希望与你度过更长的时光。}
+\chatbubble[left]{taozi.jpg}{那么接下来，就让我们携手同行吧。}
 \newpage  % 新的一页
 \vspace{3em}
 \begin{center}
@@ -181,7 +179,7 @@
     \textbf{\textcolor{white}{白日梦}}  % 中文标题
     \\[0ex]  % 标题间距
     \fontsize{15pt}{17pt}\selectfont
-    \textcolor{white}{2024年次世代动漫社社庆晚会 Opening Song}  % 英文标题
+    \textcolor{thuorange}{2024年次世代动漫社社庆晚会 Opening Song}  % 英文标题
 % 左对齐
 \vspace{2em}
 \color{white}
